@@ -7,6 +7,8 @@
     -   The Birds class may have methods like  **fly(), eat()**  etc.
 -   Since  **objects represent real-world entities**, they are used to  **call methods**  and perform actions.
 
+
+
 ## What is Class in Java ?
 
 -   Class is a blueprint or prototype or template for creating objects in Java.
@@ -23,6 +25,7 @@ access-modifiers class ClassName
     Static Members – Shared among all objects.
     Nested Classes – Class inside another class.
     Blocks – Static and instance blocks for initialization.
+}
 ```
 - Example :
 ```java
@@ -39,3 +42,28 @@ public class Animal
     }
 }
 ```
+
+
+## What is Method in Java ?
+
+-   A method in Java is a block of code that performs a specific task and can be reused multiple times.
+
+-   Syntax :
+    
+    ```java
+    access-modifiers return-type methodName(List of Parameters)
+    {
+    	// body
+    }
+    ```
+    
+-   Example :
+    
+    ```java
+    public void run(String name)
+    {
+        System.out.println(name+" is running");
+    }
+    ```
+    
+-   We can write computations, data processing, input/output operations, object manipulation, conditional logic etc inside methods to perform specific tasks efficiently.
