@@ -7,8 +7,6 @@
     -   The Birds class may have methods like  **fly(), eat()**  etc.
 -   Since  **objects represent real-world entities**, they are used to  **call methods**  and perform actions.
 
-
-
 ## What is Class in Java ?
 
 -   Class is a blueprint or prototype or template for creating objects in Java.
@@ -25,7 +23,6 @@ access-modifiers class ClassName
     Static Members – Shared among all objects.
     Nested Classes – Class inside another class.
     Blocks – Static and instance blocks for initialization.
-}
 ```
 - Example :
 ```java
@@ -43,8 +40,7 @@ public class Animal
 }
 ```
 
-
-## What is Method in Java ?
+##### What is Method in Java ?
 
 -   A method in Java is a block of code that performs a specific task and can be reused multiple times.
 
@@ -67,3 +63,56 @@ public class Animal
     ```
     
 -   We can write computations, data processing, input/output operations, object manipulation, conditional logic etc inside methods to perform specific tasks efficiently.
+
+## What is Object in Java ?
+
+-   **Object is an instance of a class**  - Objects are created from a class blueprint and represent real data.
+-   **Object is a real-world entity**  - It represents tangible things like a car, person, or book in programming.
+-   **Object occupies memory**  - When an object is created (new ClassName()), it gets memory allocated in the heap.
+
+-   Objects has its own :
+    -   **Identity**  - Unique memory reference assigned by JVM
+    -   **State / Attribute**  - Data stored in instance variables
+    -   **Behaviour**  - Actions (methods)
+
+-   Syntax :
+    -   1. Creating Objects:
+        -   ```java
+            ClassName objectName = new ClassName();
+            ```
+            
+            -   `ClassName objectName;`  — Declares a reference variable  `objectName`  of type  `ClassName`.
+            -   `new ClassName();`  — Creates a new object of  `ClassName`  by allocating memory and calling its constructor.
+            -   `=`  — Assigns the reference (address) of the newly created object to the variable  `objectName`.
+            -   So overall:  `objectName`  now holds a reference to a new  `ClassName`  object in memory.
+    -   2. Access Methods using Objects:
+        -   ```java
+            objectName.methodName();
+            ```
+            
+    -   3. Access Fields/Variables using Objects
+        -   ```java
+            objectName.field_name;
+            ```
+            
+-   Example :
+    
+    ```java
+    public class Animal
+    {
+        String color;   //instance variable
+        
+        void run()  //method
+        {
+            System.out.println("Im running");
+        }
+        public static void main(String[] args)
+        {
+            Animal buzo = new Animal();     //creating object (buzo)
+            buzo.run();                     //accessing run() method from buzo object
+            buzo.color = "Black";           //setting value in instance variable using . operator
+    
+            System.out.println("Buzo color is "+buzo.color);    //accessing instance variable
+        }
+    }
+    ```
