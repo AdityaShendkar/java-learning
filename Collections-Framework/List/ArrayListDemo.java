@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
-        List list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         list.add(100);
         list.add(110);
         list.add(120);
