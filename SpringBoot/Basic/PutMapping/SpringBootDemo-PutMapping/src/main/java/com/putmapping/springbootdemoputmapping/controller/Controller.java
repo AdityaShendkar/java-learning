@@ -51,10 +51,10 @@ public class Controller {
 
     // Update only student Per
     @PutMapping("/update-per/{id}")
-    public String updateMarks(@PathVariable int id, @RequestParam float marks) {
+    public String updateMarks(@PathVariable int id, @RequestParam float per) {
         for (Student s : studList) {
             if (s.getId() == id) {
-                s.setPer(marks);
+                s.setPer(per);
                 return "Student marks updated";
             }
         }
