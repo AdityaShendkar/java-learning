@@ -4,6 +4,7 @@ import com.PaginationAndSorting.demo.entity.Product;
 import com.PaginationAndSorting.demo.repository.ProductRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -38,4 +39,11 @@ public class ProductService {
     public List<Product> findProductsWithPagination(int offset, int pageSize){
         return productrepository.findAll(PageRequest.of(offset,pageSize)).getContent();
     }
+
+    public Page<Product> findProductsWithPaginationAndSorting(int offset,int pageSize,String field){
+        Page<Product> products = productrepository.findAll(PageRequest.of(offset, pageSize).withSort(Sort.by(field)));
+        return  products;
+    }
+
+
 }
